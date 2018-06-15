@@ -1,0 +1,16 @@
+使用RDD的一般场景：
+你需要使用low-level的transformation和action来控制你的数据集；
+你的数据集非结构化，比如：流媒体或者文本流；
+你想使用函数式编程来操作你的数据，而不是用特定领域语言(DSL)表达；
+你不在乎schema，比如，当通过名字或者列处理(或访问)数据属性不在意列式存储格式；
+你放弃使用DataFrame和Dataset来优化结构化和半结构化数据集。
+
+
+
+使用DataFrame或者Dataset的一般场景:
+你想使用丰富的语义，high-level抽象，和特定领域语言API，那你可以使用DataFrame或者Dataset；
+你处理的半结构化数据集需要high-level表达，filter，map，aggregation，average，sum，SQL查询，列式访问和使用lambda函数，那你可以使用DataFrame或者Dataset；
+你想利用编译时高度的type-safety，Catalyst优化和Tungsten的code生成，那你可以使用DataFrame或者Dataset；
+你想统一和简化API使用跨Spark的Library，那你可以使用DataFrame或者Dataset；
+如果你是一个R使用者，那你可以使用DataFrame或者Dataset；
+如果你是一个Python使用者，那你可以使用DataFrame或者Dataset。
