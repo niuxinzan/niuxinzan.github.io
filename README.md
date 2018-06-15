@@ -1,4 +1,5 @@
 # sparkDemo
+
 最近想升级spark，研究了下新版spark的功能Dataset 和Dataframe。
 Dataset 是分布式数据集， dataset的API是在spark 1.6版本中添加地，它的初衷是为了提升RDD（强类型限制， 可以使用lambda函数）优化SQL执行引擎。Dataset是JVM中的一个对象，可以作用于其它操作（map,faltMap, filter等）。Dataset API提供Scala /Java 语言支持。 Python 暂不支持Dataset API， 但由于python的动态特性，已经支持 部分dataset API （例如， 用row.columnName来读取行数据的某列），这个例子和R语言的类似。
 Dataframe 与dataset 基本类似 ，只是多了列名这些信息。 概念上，它类似于关系数据的表，及R/python 中的dataframe  但在执行效率上进一步优化。 可以从很多数据源中生成dataframe ， 如 结构化数据文件，hive表， 外部数据库，或 RDD。 Dataframe API支持 scala / java / python 和R 。在scala和java 中，dataframe  实际表示为dataset的行数据 。 在scala API 中，Dataframe 实际是Dataset[Row]的别名，但在java API 中， 开发人员需要使用Dataset<Row> 来表示 DataFrame 。 
